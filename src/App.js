@@ -1,10 +1,14 @@
-import logo from './logo.svg';
+//styles
 import './App.css';
+//components
+import Sidebar from './components/sidebar';
+import AppBody from './components/appBody';
 
 function App() {
   return (
     <div className="App">
-      <h1>Multi Step Form</h1>
+      <Sidebar />
+      <AppBody />
     </div>
   );
 }
