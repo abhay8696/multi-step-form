@@ -1,5 +1,5 @@
 //styles
-import './App.css';
+import './styles/App.css';
 //components
 import Sidebar from './components/sidebar';
 import AppBody from './components/appBody';

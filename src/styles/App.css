@@ -1,0 +1,44 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1300px;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: "";
+  align-items: "";
+  justify-content: center;
+}
+.App * {
+  box-sizing: border-box;
+}
+.App :first-child {
+  flex: 2;
+}
+.App :last-child {
+  flex: 4;
+}
+@media only screen and (max-width: 720px) {
+  .App {
+    padding: 0;
+    flex-direction: column;
+  }
+  .App :first-child {
+    flex: 2;
+  }
+  .App :last-child {
+    flex: 5;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}/*# sourceMappingURL=App.css.map */
