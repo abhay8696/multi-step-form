@@ -7,31 +7,45 @@
         height: 100%;
         visibility: hidden;
     }
+    @include md-below-screen{
+        display: none;
+    }
     color: #fff;
     background-image: url('../assets/images/bg-sidebar-desktop.svg');
     background-position: center;
     background-size: contain;
     position: relative;
     .sidebarContainer{
-        background-color: rgba(0, 0, 0, 0.185);
-        height: 100%;
+        height: 50%;
         width: 100%;
         position: absolute;
         @include flexbox(column, center, flex-start);
+        margin-top: 2rem;
+        margin-left: 1rem;
     }
     .sidebarItem{
         height: 50px;
-        width: 75%;
+        width: 100%;
         @include flexbox('', center, flex-start);
+        margin: 4px 0;
+        // background-color: rgba(0, 0, 0, 0.185);
 
-        .sidebarBullet{
-            border: 1px solid #fff;
+        .sidebarBullet, .selected{
             border-radius: 50%;
             height: 30px;
             width: 30px;
             @include flexbox('', center, center);
-            margin: 0 0.5rem; 
+            margin: 0 1rem; 
         }
+        .sidebarBullet{
+            border: 1px solid #fff;
+        }
+        .selected{
+            background-color: hsl(206, 94%, 87%);
+            border-color: hsl(206, 94%, 87%);
+            color: hsl(213, 96%, 18%);
+        }
+
         .sidebarTexts{
             @include flexbox(column, flex-start, center);
             .sidebarText1{

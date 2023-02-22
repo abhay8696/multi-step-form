@@ -4,7 +4,7 @@ import '../styles/appBody.css'
 const AppBody = () => {
     return (
         <div className='appBody'>
-            <h1>APP BODY</h1>
+            <h1>FORM BODY</h1>
         </div>
     );
 };

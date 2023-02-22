@@ -10,26 +10,32 @@
   height: 100%;
   visibility: hidden;
 }
+@media only screen and (max-width: 720px) {
+  .sidebar {
+    display: none;
+  }
+}
 .sidebar .sidebarContainer {
-  background-color: rgba(0, 0, 0, 0.185);
-  height: 100%;
+  height: 50%;
   width: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
 .sidebar .sidebarItem {
   height: 50px;
-  width: 75%;
+  width: 100%;
   display: flex;
   flex-direction: "";
   align-items: center;
   justify-content: flex-start;
+  margin: 4px 0;
 }
-.sidebar .sidebarItem .sidebarBullet {
-  border: 1px solid #fff;
+.sidebar .sidebarItem .sidebarBullet, .sidebar .sidebarItem .selected {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -37,7 +43,15 @@
   flex-direction: "";
   align-items: center;
   justify-content: center;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
+}
+.sidebar .sidebarItem .sidebarBullet {
+  border: 1px solid #fff;
+}
+.sidebar .sidebarItem .selected {
+  background-color: hsl(206deg, 94%, 87%);
+  border-color: hsl(206deg, 94%, 87%);
+  color: hsl(213deg, 96%, 18%);
 }
 .sidebar .sidebarItem .sidebarTexts {
   display: flex;
