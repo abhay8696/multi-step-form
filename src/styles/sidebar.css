@@ -1,6 +1,55 @@
 .sidebar {
+  color: #fff;
   background-image: url("../assets/images/bg-sidebar-desktop.svg");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: contain;
+  position: relative;
+}
+.sidebar img {
+  width: auto;
+  height: 100%;
+  visibility: hidden;
+}
+.sidebar .sidebarContainer {
+  background-color: rgba(0, 0, 0, 0.185);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sidebar .sidebarItem {
+  height: 50px;
+  width: 75%;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: flex-start;
+}
+.sidebar .sidebarItem .sidebarBullet {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+}
+.sidebar .sidebarItem .sidebarTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.sidebar .sidebarItem .sidebarTexts .sidebarText1 {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  opacity: 0.8;
+}
+.sidebar .sidebarItem .sidebarTexts .sidebarText2 {
+  font-weight: bold;
 }/*# sourceMappingURL=sidebar.css.map */

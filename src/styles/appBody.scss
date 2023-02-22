@@ -1,3 +1,6 @@
 .appBody{
-    background-color: aqua;
+    flex: 1;
+    @include md-below-screen{
+        flex: 5;
+    }
 }

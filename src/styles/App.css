@@ -1,34 +1,44 @@
 .App {
   text-align: center;
-  height: 100vh;
-  width: 100vw;
+  height: 600px;
   max-width: 1300px;
   padding: 1rem;
   box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 1rem;
   display: flex;
   flex-direction: "";
   align-items: "";
   justify-content: center;
 }
+@media only screen and (max-width: 480px) {
+  .App {
+    height: 100vh;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 720px) {
+  .App {
+    width: 80vw;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 960px) {
+  .App {
+    width: 95vw;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .App {
+    width: 960px;
+  }
+}
 .App * {
   box-sizing: border-box;
-}
-.App :first-child {
-  flex: 2;
-}
-.App :last-child {
-  flex: 4;
 }
 @media only screen and (max-width: 720px) {
   .App {
     padding: 0;
     flex-direction: column;
-  }
-  .App :first-child {
-    flex: 2;
-  }
-  .App :last-child {
-    flex: 5;
   }
 }
 
