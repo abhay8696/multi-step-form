@@ -5,15 +5,15 @@
   background-size: contain;
   position: relative;
 }
-.sidebar img {
-  width: auto;
-  height: 100%;
-  visibility: hidden;
-}
 @media only screen and (max-width: 720px) {
   .sidebar {
     display: none;
   }
+}
+.sidebar .dummyImg1 {
+  width: auto;
+  height: 100%;
+  visibility: hidden;
 }
 .sidebar .sidebarContainer {
   height: 50%;
@@ -35,24 +35,6 @@
   justify-content: flex-start;
   margin: 4px 0;
 }
-.sidebar .sidebarItem .sidebarBullet, .sidebar .sidebarItem .selected {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  flex-direction: "";
-  align-items: center;
-  justify-content: center;
-  margin: 0 1rem;
-}
-.sidebar .sidebarItem .sidebarBullet {
-  border: 1px solid #fff;
-}
-.sidebar .sidebarItem .selected {
-  background-color: hsl(206deg, 94%, 87%);
-  border-color: hsl(206deg, 94%, 87%);
-  color: hsl(213deg, 96%, 18%);
-}
 .sidebar .sidebarItem .sidebarTexts {
   display: flex;
   flex-direction: column;
@@ -66,4 +48,55 @@
 }
 .sidebar .sidebarItem .sidebarTexts .sidebarText2 {
   font-weight: bold;
+}
+
+.sidebarBullet, .selected {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+}
+
+.sidebarBullet {
+  border: 2px solid rgba(255, 255, 255, 0.6039215686);
+}
+
+.selected {
+  background-color: hsl(206deg, 94%, 87%);
+  border-color: hsl(206deg, 94%, 87%);
+  color: hsl(213deg, 96%, 18%);
+}
+
+.topbar {
+  color: #fff;
+  background-image: url("../assets/images/bg-sidebar-mobile.svg");
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 720px) {
+  .topbar {
+    display: none;
+  }
+}
+.topbar .topbarContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: "";
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.topbar .dummyImg2 {
+  width: 100%;
+  height: auto;
+  visibility: hidden;
 }/*# sourceMappingURL=sidebar.css.map */

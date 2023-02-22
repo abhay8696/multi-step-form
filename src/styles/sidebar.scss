@@ -2,13 +2,13 @@
 @import 'breakpoints'; 
 
 .sidebar{
-    img{
+    @include md-below-screen{
+        display: none;
+    }
+    .dummyImg1{
         width: auto;
         height: 100%;
         visibility: hidden;
-    }
-    @include md-below-screen{
-        display: none;
     }
     color: #fff;
     background-image: url('../assets/images/bg-sidebar-desktop.svg');
@@ -30,21 +30,6 @@
         margin: 4px 0;
         // background-color: rgba(0, 0, 0, 0.185);
 
-        .sidebarBullet, .selected{
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;
-            @include flexbox('', center, center);
-            margin: 0 1rem; 
-        }
-        .sidebarBullet{
-            border: 1px solid #fff;
-        }
-        .selected{
-            background-color: hsl(206, 94%, 87%);
-            border-color: hsl(206, 94%, 87%);
-            color: hsl(213, 96%, 18%);
-        }
 
         .sidebarTexts{
             @include flexbox(column, flex-start, center);
@@ -57,5 +42,47 @@
                 font-weight: bold;
             }
         }
+    }
+}
+
+.sidebarBullet, .selected{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    @include flexbox('', center, center);
+    margin: 0 1rem; 
+}
+.sidebarBullet{
+    border: 2px solid #ffffff9a;
+}
+.selected{
+    background-color: hsl(206, 94%, 87%);
+    border-color: hsl(206, 94%, 87%);
+    color: hsl(213, 96%, 18%);
+}
+
+.topbar{
+    @include md-above-screen{
+        display: none;
+    }
+    color: #fff;
+    background-image: url('../assets/images/bg-sidebar-mobile.svg');
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    background-repeat: no-repeat;
+    .topbarContainer{
+        position: absolute;
+        @include flexbox('', center, center);
+        width: 250px;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        // background-color: rgba(0, 0, 0, 0.247);
+    }
+    .dummyImg2{
+        width: 100%;
+        height: auto;
+        visibility: hidden;
     }
 }

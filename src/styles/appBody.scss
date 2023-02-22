@@ -1,6 +1,3 @@
 .appBody{
     flex: 1;
-    @include md-below-screen{
-        flex: 5;
-    }
 }

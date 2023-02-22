@@ -1,25 +1,22 @@
 .App {
   text-align: center;
   height: 600px;
+  background-color: #fff;
   max-width: 1300px;
   padding: 1rem;
   box-sizing: border-box;
-  background-color: #fff;
   border-radius: 1rem;
   display: flex;
   flex-direction: "";
   align-items: "";
   justify-content: center;
 }
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 720px) {
   .App {
     height: 100vh;
     width: 100vw;
-  }
-}
-@media only screen and (min-width: 480px) and (max-width: 720px) {
-  .App {
-    width: 80vw;
+    border-radius: 0;
+    background-color: hsl(206deg, 94%, 87%);
   }
 }
 @media only screen and (min-width: 720px) and (max-width: 960px) {

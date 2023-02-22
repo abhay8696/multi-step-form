@@ -4,12 +4,12 @@
 .App {
     text-align: center;
     height: 600px;
-    @include sm-below-screen{
+    background-color: #fff;
+    @include md-below-screen{
       height: 100vh;
       width: 100vw;
-    }
-    @include sm-md-screen{
-      width: 80vw;
+      border-radius: 0;
+      background-color: hsl(206, 94%, 87%);
     }
     @include md-lg-screen{
       width: 95vw;
@@ -20,7 +20,6 @@
     max-width: 1300px;
     padding: 1rem;
     box-sizing: border-box;
-    background-color: #fff;
     border-radius: 1rem;
     *{
         box-sizing: border-box;
