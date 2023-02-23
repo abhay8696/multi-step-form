@@ -11,7 +11,7 @@ const Step1 = () => {
             <div className='stepBody stepBody1'>
                 <div>
                     <label for='name'>Name</label>
-                    <input id='name' placeholder='e.g. Stephen King' autoComplete='none' autoFocus>
+                    <input id='name' placeholder='e.g. Stephen King' autoComplete='none'>
 
                     </input>
                 </div>
