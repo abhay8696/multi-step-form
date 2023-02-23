@@ -1,3 +1,69 @@
 .appBody {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.appBody .formBody {
+  height: 100%;
+  margin-top: 2rem;
+}
+@media only screen and (min-width: 720px) and (max-width: 840px) {
+  .appBody .formBody {
+    max-width: 80%;
+  }
+}
+.appBody .formBody .stepHead {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.appBody .formBody .stepHead .headH1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: hsl(213deg, 96%, 18%);
+  margin-bottom: 0.5rem;
+}
+.appBody .formBody .stepHead .headInfo {
+  opacity: 0.3;
+  font-size: 0.9rem;
+  text-align: left;
+}
+.appBody .formBody .stepBody {
+  height: 50%;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.appBody .formBody .stepBody div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  color: hsl(213deg, 96%, 18%);
+}
+.appBody .formBody .stepBody div label {
+  margin-top: 0.5rem;
+}
+.appBody .formBody .stepBody div input {
+  outline: none;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid rgba(128, 128, 128, 0.616);
+  width: 100%;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: hsl(213deg, 96%, 18%);
+  font-weight: 700;
+}
+.appBody .formBody .stepBody div input:focus {
+  border-color: hsl(213deg, 96%, 18%);
 }/*# sourceMappingURL=appBody.css.map */

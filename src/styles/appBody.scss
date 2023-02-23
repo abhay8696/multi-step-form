@@ -1,3 +1,63 @@
+@import 'flexbox';
+@import 'breakpoints'; 
+
 .appBody{
     flex: 1;
+    // background-color: #00000049;
+    @include flexbox(column, center, center);
+
+    .formBody{
+        height: 100%;
+        @media only screen and (min-width: 720px) and (max-width: 840px){
+            // background-color: rgba(255, 0, 0, 0.411);
+            max-width: 80%;
+        }
+        margin-top: 2rem;
+        .stepHead{
+            @include flexbox(column, flex-start, center);
+            margin-bottom: 1rem;
+            .headH1{
+                font-size: 32px;
+                font-weight: 600;
+                color: hsl(213, 96%, 18%);
+                margin-bottom: 0.5rem;
+            }
+            .headInfo{
+                opacity: 0.3;
+                font-size: 0.9rem;
+                text-align: left;
+            }
+        }
+        .stepBody{
+            height: 50%;
+            width: 100%;
+            margin-top: 2rem;
+            // background-color: #00000049;
+            @include flexbox(column, flex-start, center);
+            div{
+                @include flexbox(column, flex-start, center);
+                width: 100%;
+                color: hsl(213, 96%, 18%);
+                label{
+                    margin-top: 0.5rem;
+                }
+                input{
+                    outline: none;
+                    padding: 16px;
+                    border-radius: 8px;
+                    box-shadow: none;
+                    // border: none;
+                    border: 1px solid rgba(128, 128, 128, 0.616);
+                    width: 100%;
+                    margin: 0.5rem 0;
+                    font-size: 1rem;
+                    color: hsl(213, 96%, 18%);
+                    font-weight: 700;
+                    &:focus{
+                        border-color: hsl(213, 96%, 18%);
+                    }
+                }
+            }
+        }
+    }
 }
