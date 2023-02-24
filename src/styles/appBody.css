@@ -60,11 +60,15 @@
 .appBody .formBody .stepBody {
   height: 50%;
   width: 100%;
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+@media only screen and (min-width: 720px) {
+  .appBody .formBody .stepBody {
+    margin-top: 2rem;
+  }
 }
 .appBody .formBody .stepBody .step1Inputs {
   display: flex;
@@ -97,22 +101,37 @@
   flex-direction: row;
   align-items: space-between;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
 }
 .appBody .formBody .stepBody .squareArea .square {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
   cursor: pointer;
   margin-top: 0.5rem;
   border: 2px solid rgba(201, 201, 201, 0.616);
   font-size: 1rem;
   color: hsl(213deg, 96%, 18%);
   border-radius: 8px;
-  height: 200px;
-  width: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   padding: 1rem 1rem;
+}
+@media only screen and (max-width: 720px) {
+  .appBody .formBody .stepBody .squareArea .square {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .appBody .formBody .stepBody .squareArea .square {
+    height: 200px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 .appBody .formBody .stepBody .squareArea .square:hover {
   border-color: hsla(213deg, 96%, 18%, 0.411);
@@ -123,8 +142,15 @@
   align-items: flex-start;
   justify-content: space-between;
 }
-.appBody .formBody .stepBody .squareArea .square .squareTexts * {
-  margin-bottom: 0.5rem;
+@media only screen and (max-width: 960px) {
+  .appBody .formBody .stepBody .squareArea .square .squareTexts {
+    margin-left: 1rem;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .appBody .formBody .stepBody .squareArea .square .squareTexts * {
+    margin-bottom: 0.5rem;
+  }
 }
 .appBody .formBody .stepBody .squareArea .square .squareTexts .squareName {
   font-weight: 700;

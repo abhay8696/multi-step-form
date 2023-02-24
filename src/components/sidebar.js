@@ -13,7 +13,7 @@ const Sidebar = () => {
         let arr = [];
         let bulletClassName = 'sidebarBullet';
         for(let i=1; i<texts.length; i++){
-            if(i===1) bulletClassName = 'selected';
+            if(i===1) bulletClassName = 'sidebarBullet selected';
             else bulletClassName = 'sidebarBullet';
             arr.push(
                 <div className='sidebarItem'>
@@ -32,7 +32,7 @@ const Sidebar = () => {
         let arr = [];
         let bulletClassName = 'sidebarBullet';
         for(let i=1; i<=4; i++){
-            if(i===1) bulletClassName = 'selected';
+            if(i===1) bulletClassName = 'sidebarBullet selected';
             else bulletClassName = 'sidebarBullet';
             arr.push(<div className={bulletClassName}>{i}</div>)
         }

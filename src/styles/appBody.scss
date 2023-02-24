@@ -51,7 +51,9 @@
         .stepBody{
             height: 50%;
             width: 100%;
-            margin-top: 2rem;
+            @include md-above-screen{
+                margin-top: 2rem;
+            }
             @include flexbox(column, flex-start, center);
             .step1Inputs{
                 @include flexbox(column, flex-start, center);
@@ -79,8 +81,20 @@
             }
             .squareArea{
                 @include flexbox(row, space-between, space-between);
+                flex-wrap: wrap;
                 width: 100%;
                 .square{
+                    // height: 50px;
+                    width: 200px;
+                    @include flexbox(row, flex-start, flex-start);
+                    @include md-below-screen{
+                        width: 100%;
+                    }
+                    @include lg-above-screen{
+                        height: 200px;
+                        width: 150px;
+                        @include flexbox(column, flex-start, space-between);
+                    }
                     cursor: pointer;
                     &:hover{
                         border-color: hsla(213, 96%, 18%, 0.411);
@@ -91,14 +105,16 @@
                     color: hsl(213, 96%, 18%);
                     
                     border-radius: 8px;
-                    height: 200px;
-                    width: 150px;
-                    @include flexbox(column, flex-start, space-between);
                     padding: 1rem 1rem;
                     .squareTexts{
                         @include flexbox(column, flex-start, space-between);
+                        @include lg-below-screen{
+                            margin-left: 1rem;
+                        }
                         *{
-                            margin-bottom: 0.5rem;
+                            @include lg-above-screen{
+                                margin-bottom: 0.5rem;
+                            }
                         }
                         .squareName{
                             font-weight: 700;

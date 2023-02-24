@@ -44,7 +44,7 @@
     }
 }
 
-.sidebarBullet, .selected{
+.sidebarBullet{
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -53,11 +53,6 @@
 }
 .sidebarBullet{
     border: 2px solid #ffffff9a;
-}
-.selected{
-    background-color: hsl(206, 94%, 87%);
-    border-color: hsl(206, 94%, 87%);
-    color: hsl(213, 96%, 18%);
 }
 
 .topbar{
