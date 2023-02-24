@@ -8,9 +8,9 @@
 
     .formBody{
         height: 100%;
+        width: 75%;
         box-sizing: border-box;
         @media only screen and (min-width: 720px) and (max-width: 840px){
-            // background-color: rgba(255, 0, 0, 0.411);
             max-width: 80%;
         }
         margin-top: 2rem;
@@ -24,6 +24,7 @@
             -webkit-box-shadow: 0px 5px 10px 1px rgba(173,173,173,1);
             -moz-box-shadow: 0px 5px 10px 1px rgba(173,173,173,1);
             box-shadow: 0px 5px 10px 1px rgba(173,173,173,1);
+            min-height: 50%;
         }
         @include sm-md-screen{
             top: 100px;
@@ -51,9 +52,8 @@
             height: 50%;
             width: 100%;
             margin-top: 2rem;
-            // background-color: #00000049;
             @include flexbox(column, flex-start, center);
-            div{
+            .step1Inputs{
                 @include flexbox(column, flex-start, center);
                 width: 100%;
                 color: hsl(213, 96%, 18%);
@@ -77,6 +77,51 @@
                     }
                 }
             }
+            .squareArea{
+                @include flexbox(row, space-between, space-between);
+                width: 100%;
+                .square{
+                    cursor: pointer;
+                    &:hover{
+                        border-color: hsla(213, 96%, 18%, 0.411);
+                    }
+                    margin-top: 0.5rem;
+                    border: 2px solid rgba(201, 201, 201, 0.616);
+                    font-size: 1rem;
+                    color: hsl(213, 96%, 18%);
+                    
+                    border-radius: 8px;
+                    height: 200px;
+                    width: 150px;
+                    @include flexbox(column, flex-start, space-between);
+                    padding: 1rem 1rem;
+                    .squareTexts{
+                        @include flexbox(column, flex-start, space-between);
+                        *{
+                            margin-bottom: 0.5rem;
+                        }
+                        .squareName{
+                            font-weight: 700;
+                        }
+                        .squarePrice{
+                            opacity: 0.8;
+                            font-size: 0.9rem;
+                            font-weight: 100;
+                        }
+                        .squareMsg{
+                            font-size: 0.8rem;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .selected{
+                    border-color: hsla(213, 96%, 18%, 0.411);
+                }
+            }
+        }
+        .stepBody2{
+            justify-content: space-between;
         }
     }
 }
+

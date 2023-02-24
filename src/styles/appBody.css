@@ -7,6 +7,7 @@
 }
 .appBody .formBody {
   height: 100%;
+  width: 75%;
   box-sizing: border-box;
   margin-top: 2rem;
 }
@@ -24,6 +25,7 @@
     width: 80%;
     padding: 2rem;
     box-shadow: 0px 5px 10px 1px rgb(173, 173, 173);
+    min-height: 50%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 720px) {
@@ -64,7 +66,7 @@
   align-items: flex-start;
   justify-content: center;
 }
-.appBody .formBody .stepBody div {
+.appBody .formBody .stepBody .step1Inputs {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -72,10 +74,10 @@
   width: 100%;
   color: hsl(213deg, 96%, 18%);
 }
-.appBody .formBody .stepBody div label {
+.appBody .formBody .stepBody .step1Inputs label {
   margin-top: 0.5rem;
 }
-.appBody .formBody .stepBody div input {
+.appBody .formBody .stepBody .step1Inputs input {
   outline: none;
   padding: 16px;
   border-radius: 8px;
@@ -87,6 +89,58 @@
   color: hsl(213deg, 96%, 18%);
   font-weight: 700;
 }
-.appBody .formBody .stepBody div input:focus {
+.appBody .formBody .stepBody .step1Inputs input:focus {
   border-color: hsl(213deg, 96%, 18%);
+}
+.appBody .formBody .stepBody .squareArea {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+.appBody .formBody .stepBody .squareArea .square {
+  cursor: pointer;
+  margin-top: 0.5rem;
+  border: 2px solid rgba(201, 201, 201, 0.616);
+  font-size: 1rem;
+  color: hsl(213deg, 96%, 18%);
+  border-radius: 8px;
+  height: 200px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+}
+.appBody .formBody .stepBody .squareArea .square:hover {
+  border-color: hsla(213deg, 96%, 18%, 0.411);
+}
+.appBody .formBody .stepBody .squareArea .square .squareTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.appBody .formBody .stepBody .squareArea .square .squareTexts * {
+  margin-bottom: 0.5rem;
+}
+.appBody .formBody .stepBody .squareArea .square .squareTexts .squareName {
+  font-weight: 700;
+}
+.appBody .formBody .stepBody .squareArea .square .squareTexts .squarePrice {
+  opacity: 0.8;
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.appBody .formBody .stepBody .squareArea .square .squareTexts .squareMsg {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+.appBody .formBody .stepBody .squareArea .selected {
+  border-color: hsla(213deg, 96%, 18%, 0.411);
+}
+.appBody .formBody .stepBody2 {
+  justify-content: space-between;
 }/*# sourceMappingURL=appBody.css.map */
