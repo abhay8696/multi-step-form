@@ -141,6 +141,7 @@
                     .step3Checkbox{
                         width: 20px;
                         height: 20px;
+                        cursor: pointer;
                         @include sm-below-screen{
                             width: 16px;
                             height: 16px;
@@ -171,6 +172,65 @@
                 }
                 .selected{
                     border-color: hsla(213, 96%, 18%, 0.411);
+                }
+            }
+            .description, .totalDiv{
+                width: 100%;
+            }
+            .description{
+                    @include flexbox(column, center, center);
+                    padding: 1.5rem;
+                    border-radius: 1rem;
+                    background-color: hsl(217, 100%, 97%);
+                    .subscriptionPlan{
+                        width: 100% ;
+                        @include flexbox(row, center, space-between);
+                        .planTexts{
+                            @include flexbox(column, flex-start, center);
+                            .planName{
+                                font-weight: 700;
+                                margin-bottom: 0.2rem;
+                            }
+                            .planChange{
+                                font-size: 0.9rem;
+                                opacity: 0.5;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                        .squarePrice{
+                            font-weight: 700;
+                        }
+                        padding-bottom: 1.2rem;
+                        border-bottom: 1px solid rgba(201, 201, 201, 0.363);
+                    }
+                    .details{
+                        @include flexbox(column, center, center);
+                        width: 100%;
+                        padding-top: 0.5rem;
+                        .detailInfo{
+                            width: 100%;
+                            @include flexbox(row, center, space-between);
+                            padding: 0.5rem 0;
+                            font-size: 0.9rem;
+                            opacity: 0.5;
+                        }
+                        & :last-child{
+                            // background-color: red;
+                            padding-bottom: 0;
+                        }
+                    }
+            }
+            .totalDiv{
+                padding: 1.5rem;
+                @include flexbox(row, center, space-between);
+                .total{
+                    opacity: 0.5;
+                }
+                .totalPrice{
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    color: hsl(243, 100%, 62%);
                 }
             }
         }

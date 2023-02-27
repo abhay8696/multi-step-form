@@ -176,6 +176,7 @@
 .appBody .formBody .stepBody .squareArea .step3Square .step3Checkbox {
   width: 20px;
   height: 20px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 480px) {
   .appBody .formBody .stepBody .squareArea .step3Square .step3Checkbox {
@@ -211,6 +212,82 @@
 }
 .appBody .formBody .stepBody .squareArea .selected {
   border-color: hsla(213, 96%, 18%, 0.411);
+}
+.appBody .formBody .stepBody .description, .appBody .formBody .stepBody .totalDiv {
+  width: 100%;
+}
+.appBody .formBody .stepBody .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: hsl(217, 100%, 97%);
+}
+.appBody .formBody .stepBody .description .subscriptionPlan {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid rgba(201, 201, 201, 0.363);
+}
+.appBody .formBody .stepBody .description .subscriptionPlan .planTexts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.appBody .formBody .stepBody .description .subscriptionPlan .planTexts .planName {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.appBody .formBody .stepBody .description .subscriptionPlan .planTexts .planChange {
+  font-size: 0.9rem;
+  opacity: 0.5;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.appBody .formBody .stepBody .description .subscriptionPlan .squarePrice {
+  font-weight: 700;
+}
+.appBody .formBody .stepBody .description .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 0.5rem;
+}
+.appBody .formBody .stepBody .description .details .detailInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+.appBody .formBody .stepBody .description .details :last-child {
+  padding-bottom: 0;
+}
+.appBody .formBody .stepBody .totalDiv {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.appBody .formBody .stepBody .totalDiv .total {
+  opacity: 0.5;
+}
+.appBody .formBody .stepBody .totalDiv .totalPrice {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: hsl(243, 100%, 62%);
 }
 .appBody .formBody .stepBody2 {
   justify-content: space-between;
