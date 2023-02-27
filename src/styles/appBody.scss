@@ -54,6 +54,7 @@
             @include md-above-screen{
                 margin-top: 2rem;
             }
+            color: hsl(213, 96%, 18%);
             @include flexbox(column, flex-start, center);
             .step1Inputs{
                 @include flexbox(column, flex-start, center);
@@ -102,7 +103,6 @@
                     margin-top: 0.5rem;
                     border: 2px solid rgba(201, 201, 201, 0.616);
                     font-size: 1rem;
-                    color: hsl(213, 96%, 18%);
                     
                     border-radius: 8px;
                     padding: 1rem 1rem;
@@ -130,6 +130,45 @@
                         }
                     }
                 }
+                .step3Square{
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    height: auto;
+                    .squarePrice{
+                        flex: 1;
+                    }
+                    .step3Checkbox{
+                        width: 20px;
+                        height: 20px;
+                        @include sm-below-screen{
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    .squareTexts{
+                        flex: 8;
+                        margin: 0;
+                        padding-left: 1rem;
+                        @include sm-below-screen{
+                            padding-left: 0.5rem;
+                        }
+                        text-align: left;
+                        .squareName, .squareMsg{
+                            margin-bottom: 0.2rem;
+                        }
+                        .squareMsg{
+                            opacity: 0.5;
+                        }
+                    }
+                    .squarePrice{
+                        font-size: 0.8rem;
+                        opacity: 0.9;
+                    }
+                    @include sm-below-screen{
+                        padding: 1rem 0.5rem;
+                    }
+                }
                 .selected{
                     border-color: hsla(213, 96%, 18%, 0.411);
                 }
@@ -137,6 +176,17 @@
         }
         .stepBody2{
             justify-content: space-between;
+        }
+        .monthYearSwitch{
+            width: 100%;
+            @include flexbox(row, center, center);
+            @include lg-below-screen{
+                margin: 1rem 0;
+            }
+            font-size: 0.9rem;
+            #month, #year{
+                margin: 0 1rem;
+            }
         }
     }
 }

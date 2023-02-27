@@ -1,12 +1,13 @@
 import React from 'react';
 //styles
-import '../styles/appBody.css'
+import '../styles/appBody.css';
+import '../styles/extra.css';   
 //assets
 import arcade from '../assets/images/icon-arcade.svg';
 import advanced from '../assets/images/icon-advanced.svg';
 import pro from '../assets/images/icon-pro.svg';
 
-const Step1 = () => {
+const Step2 = () => {
     return (
         <div className='formBody step2'>
             <div className='stepHead'>
@@ -47,13 +48,14 @@ const Step1 = () => {
                     </div>
                 </div>
                 <div className='monthYearSwitch'>
-                    <span>Monthly</span>
-                    <button></button>
-                    <span>Yearly</span>
+                    <span id='month'>Monthly</span>
+                    <input type="checkbox" id="switch" className='toggleInput'/>
+                    <label for="switch" className='toggle'>Toggle</label>
+                    <span id='year'>Yearly</span>
                 </div>
-            </div>
+            </div>  
         </div>
     );
 };
 
-export default Step1;
+export default Step2;

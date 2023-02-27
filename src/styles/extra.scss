@@ -1,0 +1,44 @@
+.toggleInput[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.toggle {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 3rem;
+	height: 1.5rem;
+	background: grey;
+	display: block;
+	border-radius: 1.5rem;
+	position: relative;
+}
+
+.toggle:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #ffffff;
+	border-radius: 1rem;
+	transition: 100ms;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+input:checked + .toggle {
+	background: hsl(213, 96%, 18%);
+}
+
+input:checked + .toggle:after {
+	left: 100%;
+	transform: translateX(-100%);
+}
+
+.toggle:active:after {
+	// width: 2rem;
+}

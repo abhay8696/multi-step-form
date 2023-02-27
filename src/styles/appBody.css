@@ -49,7 +49,7 @@
 .appBody .formBody .stepHead .headH1 {
   font-size: 32px;
   font-weight: 600;
-  color: hsl(213deg, 96%, 18%);
+  color: hsl(213, 96%, 18%);
   margin-bottom: 0.5rem;
 }
 .appBody .formBody .stepHead .headInfo {
@@ -60,6 +60,7 @@
 .appBody .formBody .stepBody {
   height: 50%;
   width: 100%;
+  color: hsl(213, 96%, 18%);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -76,7 +77,7 @@
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  color: hsl(213deg, 96%, 18%);
+  color: hsl(213, 96%, 18%);
 }
 .appBody .formBody .stepBody .step1Inputs label {
   margin-top: 0.5rem;
@@ -90,11 +91,11 @@
   width: 100%;
   margin: 0.5rem 0;
   font-size: 1rem;
-  color: hsl(213deg, 96%, 18%);
+  color: hsl(213, 96%, 18%);
   font-weight: 700;
 }
 .appBody .formBody .stepBody .step1Inputs input:focus {
-  border-color: hsl(213deg, 96%, 18%);
+  border-color: hsl(213, 96%, 18%);
 }
 .appBody .formBody .stepBody .squareArea {
   display: flex;
@@ -114,7 +115,6 @@
   margin-top: 0.5rem;
   border: 2px solid rgba(201, 201, 201, 0.616);
   font-size: 1rem;
-  color: hsl(213deg, 96%, 18%);
   border-radius: 8px;
   padding: 1rem 1rem;
 }
@@ -134,7 +134,7 @@
   }
 }
 .appBody .formBody .stepBody .squareArea .square:hover {
-  border-color: hsla(213deg, 96%, 18%, 0.411);
+  border-color: hsla(213, 96%, 18%, 0.411);
 }
 .appBody .formBody .stepBody .squareArea .square .squareTexts {
   display: flex;
@@ -164,9 +164,70 @@
   font-size: 0.8rem;
   font-weight: normal;
 }
+.appBody .formBody .stepBody .squareArea .step3Square {
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  height: auto;
+}
+.appBody .formBody .stepBody .squareArea .step3Square .squarePrice {
+  flex: 1;
+}
+.appBody .formBody .stepBody .squareArea .step3Square .step3Checkbox {
+  width: 20px;
+  height: 20px;
+}
+@media only screen and (max-width: 480px) {
+  .appBody .formBody .stepBody .squareArea .step3Square .step3Checkbox {
+    width: 16px;
+    height: 16px;
+  }
+}
+.appBody .formBody .stepBody .squareArea .step3Square .squareTexts {
+  flex: 8;
+  margin: 0;
+  padding-left: 1rem;
+  text-align: left;
+}
+@media only screen and (max-width: 480px) {
+  .appBody .formBody .stepBody .squareArea .step3Square .squareTexts {
+    padding-left: 0.5rem;
+  }
+}
+.appBody .formBody .stepBody .squareArea .step3Square .squareTexts .squareName, .appBody .formBody .stepBody .squareArea .step3Square .squareTexts .squareMsg {
+  margin-bottom: 0.2rem;
+}
+.appBody .formBody .stepBody .squareArea .step3Square .squareTexts .squareMsg {
+  opacity: 0.5;
+}
+.appBody .formBody .stepBody .squareArea .step3Square .squarePrice {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+@media only screen and (max-width: 480px) {
+  .appBody .formBody .stepBody .squareArea .step3Square {
+    padding: 1rem 0.5rem;
+  }
+}
 .appBody .formBody .stepBody .squareArea .selected {
-  border-color: hsla(213deg, 96%, 18%, 0.411);
+  border-color: hsla(213, 96%, 18%, 0.411);
 }
 .appBody .formBody .stepBody2 {
   justify-content: space-between;
+}
+.appBody .formBody .monthYearSwitch {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+@media only screen and (max-width: 960px) {
+  .appBody .formBody .monthYearSwitch {
+    margin: 1rem 0;
+  }
+}
+.appBody .formBody .monthYearSwitch #month, .appBody .formBody .monthYearSwitch #year {
+  margin: 0 1rem;
 }/*# sourceMappingURL=appBody.css.map */
