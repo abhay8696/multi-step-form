@@ -5,6 +5,11 @@
   align-items: center;
   justify-content: center;
 }
+@media only screen and (min-width: 720px) {
+  .appBody {
+    position: relative;
+  }
+}
 .appBody .formBody {
   height: 100%;
   width: 75%;
@@ -315,6 +320,11 @@
   justify-content: center;
   margin-top: 0;
 }
+@media only screen and (max-width: 480px) {
+  .appBody .step5 {
+    top: 100px;
+  }
+}
 .appBody .step5 .thankYouDiv {
   width: 100%;
   display: flex;
@@ -336,4 +346,44 @@
   align-items: center;
   justify-content: center;
   opacity: 0.5;
+}
+.appBody .formButtons {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media only screen and (min-width: 720px) {
+  .appBody .formButtons {
+    position: absolute;
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .appBody .formButtons {
+    position: fixed;
+    width: 100%;
+  }
+}
+.appBody .formButtons .nextButton, .appBody .formButtons .backButton {
+  margin: 1rem;
+  padding: 8px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.appBody .formButtons .nextButton {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  border-radius: 8px;
+}
+.appBody .formButtons .backButton {
+  color: hsl(213, 96%, 18%);
+  opacity: 0.5;
+}
+.appBody .formButtons .backButton:hover {
+  opacity: 1;
 }/*# sourceMappingURL=appBody.css.map */

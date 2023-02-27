@@ -35,6 +35,10 @@ const Step4 = () => {
                     <span className='totalPrice'>+$12/mo</span>
                 </div>
             </div>  
+            <div className='formButtons'>
+                <div className='backButton'>Go Back</div>
+                <div className='nextButton'>Confirm</div>
+            </div>
         </div>
     );
 };

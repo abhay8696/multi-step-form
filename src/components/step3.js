@@ -38,6 +38,10 @@ const Step3 = () => {
                     </div>
                 </div>
             </div>  
+            <div className='formButtons'>
+                <div className='backButton'>Go Back</div>
+                <div className='nextButton'>Next Step</div>
+            </div>
         </div>
     );
 };

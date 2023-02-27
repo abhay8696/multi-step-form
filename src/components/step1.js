@@ -24,6 +24,10 @@ const Step1 = () => {
                     <input id='phone' type='number' placeholder='e.g. +1 12347555' autoComplete='none'></input>
                 </div>
             </div>
+            <div className='formButtons'>
+                <div className='backButton'></div>
+                <div className='nextButton'>Next Step</div>
+            </div>
         </div>
     );
 };

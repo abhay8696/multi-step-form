@@ -54,6 +54,10 @@ const Step2 = () => {
                     <span id='year'>Yearly</span>
                 </div>
             </div>  
+            <div className='formButtons'>
+                <div className='backButton'>Go Back</div>
+                <div className='nextButton'>Next Step</div>
+            </div>
         </div>
     );
 };

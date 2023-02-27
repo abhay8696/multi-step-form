@@ -5,7 +5,9 @@
     flex: 1;
     // background-color: #00000049;
     @include flexbox(column, center, center);
-
+    @include md-above-screen{
+        position: relative;
+    }
     .formBody{
         height: 100%;
         width: 75%;
@@ -252,6 +254,9 @@
     .step5{
         @include flexbox(row, center, center);
         margin-top: 0;
+        @include sm-below-screen{
+            top: 100px;
+        }
         .thankYouDiv{
             width: 100%;
             @include flexbox(column, center, center);
@@ -266,6 +271,40 @@
             .thankYouMsg{
                 @include flexbox(column, center, center);
                 opacity: 0.5;
+            }
+        }
+    }
+
+    .formButtons{
+        @include md-above-screen{
+            position: absolute;
+            width: 75%;
+        }
+        @include md-below-screen{
+            position: fixed;
+            width: 100%;
+        }
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #fff;
+        @include flexbox(row, center, space-between);
+        .nextButton, .backButton{
+            margin: 1rem;
+            padding: 8px 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        .nextButton{
+            background-color: hsl(213, 96%, 18%);
+            color: white;
+            border-radius: 8px;
+        }
+        .backButton{
+            color: hsl(213, 96%, 18%);
+            opacity: 0.5;
+            &:hover{
+                opacity: 1;
             }
         }
     }
