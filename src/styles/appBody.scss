@@ -249,5 +249,25 @@
             }
         }
     }
+    .step5{
+        @include flexbox(row, center, center);
+        margin-top: 0;
+        .thankYouDiv{
+            width: 100%;
+            @include flexbox(column, center, center);
+            img{
+                margin-bottom: 1rem;
+            }
+            .thankYouHead{
+                margin: 1rem 0;
+                font-size: 1.5rem;
+                font-weight: 700;
+            }
+            .thankYouMsg{
+                @include flexbox(column, center, center);
+                opacity: 0.5;
+            }
+        }
+    }
 }
 
