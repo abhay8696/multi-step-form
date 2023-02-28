@@ -11,11 +11,11 @@ import Step5 from './step5';
 const AppBody = () => {
     return (
         <div className='appBody'>
-            {/* <Step1 /> */}
+            <Step1 />
             {/* <Step2 /> */}
             {/* <Step3 /> */}
             {/* <Step4 /> */}
-            <Step5 />
+            {/* <Step5 /> */}
         </div>
     );
 };

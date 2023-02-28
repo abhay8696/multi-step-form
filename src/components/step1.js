@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/appBody.css'
 
 const Step1 = () => {
+    //states
+    const [formData, setFormData] = useState({ name: 'adsad', email: 'asdas@as.com', phone: '45465465' });
+    //functions
+    const 
+    submitForm1 = (evt)=>{
+        evt.preventDefault();
+        console.log(formData);
+    },
+    handleChange = (event) => {
+      const { name, value } = event.target;
+      console.log({name, value})
+      setFormData({ ...formData, [name]: value });
+    };
     return (
-        <div className='formBody step1'>
+        <form className='formBody step1' onSubmit={submitForm1}>
             <div className='stepHead'>
                 <span className='headH1'>Personal Info</span>
                 <span className='headInfo'>Please provide your name, email address and phone number.</span>
@@ -11,24 +24,54 @@ const Step1 = () => {
             <div className='stepBody stepBody1'>
                 <div className='step1Inputs'>
                     <label for='name'>Name</label>
-                    <input id='name' placeholder='e.g. Stephen King' autoComplete='none'>
-
+                    <input 
+                    id='name' 
+                    name='name'
+                    placeholder='e.g. Stephen King' 
+                    required
+                    autoComplete='none'
+                    value={formData.name}
+                    onChange={handleChange} 
+                    >
                     </input>
                 </div>
                 <div className='step1Inputs'>
                     <label for='email'>Email Address</label>
-                    <input id='email' type='email' placeholder='e.g. stephen@email.com' autoComplete='none'></input>
+                    <input 
+                    id='email' 
+                    type='email'
+                    name='email' 
+                    placeholder='e.g. stephen@email.com' 
+                    required
+                    autoComplete='none'
+                    value={formData.email}
+                    onChange={handleChange}
+                    >
+                    </input>
                 </div>
                 <div className='step1Inputs'>
                     <label for='phone'>Phone Number</label>
-                    <input id='phone' type='number' placeholder='e.g. +1 12347555' autoComplete='none'></input>
+                    <input 
+                    id='phone' 
+                    type='number'
+                    name='phone' 
+                    placeholder='e.g. +1 12347555' 
+                    required
+                    autoComplete='none'
+                    value={formData.phone}
+                    onChange={handleChange}
+                    >
+                    </input>
                 </div>
             </div>
             <div className='formButtons'>
                 <div className='backButton'></div>
-                <div className='nextButton'>Next Step</div>
+                <button 
+                className='nextButton' 
+                type='submit'
+                >Next Step</button>
             </div>
-        </div>
+        </form>
     );
 };
 
