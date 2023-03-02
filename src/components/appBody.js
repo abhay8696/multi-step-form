@@ -9,7 +9,7 @@ import Step4 from './step4';
 import Step5 from './step5';
 
 const AppBody = props => {
-    const {currnetPage ,changePage ,updateAppData, appData} = props
+    const {currnetPage ,changePage ,updateAppData, appData, handleAdd_on} = props
     // functions
     const
     displayPage = ()=> {
@@ -22,7 +22,7 @@ const AppBody = props => {
                 comp = <Step2 updateAppData={updateAppData} changePage={changePage} appData={appData}/>
                 break;
             case 3:
-                comp = <Step3 updateAppData={updateAppData} changePage={changePage} appData={appData}/>
+                comp = <Step3 updateAppData={updateAppData} changePage={changePage} appData={appData} handleAdd_on={handleAdd_on}/>
                 break;
             case 4:
                 comp = <Step4 updateAppData={updateAppData} changePage={changePage} appData={appData}/>

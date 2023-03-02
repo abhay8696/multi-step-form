@@ -4,7 +4,9 @@ import '../styles/sidebar.css';
 import dummyImg1 from '../assets/images/bg-sidebar-desktop.svg';
 import dummyImg2 from '../assets/images/bg-sidebar-mobile.svg';
 
-const Sidebar = () => {
+const Sidebar = props => {
+    // props
+    const { currnetPage } = props;
 
     //funtions
     const
@@ -13,7 +15,8 @@ const Sidebar = () => {
         let arr = [];
         let bulletClassName = 'sidebarBullet';
         for(let i=1; i<texts.length; i++){
-            if(i===1) bulletClassName = 'sidebarBullet selected';
+
+            if(i===currnetPage) bulletClassName = 'sidebarBullet selected';
             else bulletClassName = 'sidebarBullet';
             arr.push(
                 <div className='sidebarItem'>
@@ -32,7 +35,7 @@ const Sidebar = () => {
         let arr = [];
         let bulletClassName = 'sidebarBullet';
         for(let i=1; i<=4; i++){
-            if(i===1) bulletClassName = 'sidebarBullet selected';
+            if(i===currnetPage) bulletClassName = 'sidebarBullet selected';
             else bulletClassName = 'sidebarBullet';
             arr.push(<div className={bulletClassName}>{i}</div>)
         }

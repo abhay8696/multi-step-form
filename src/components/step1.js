@@ -5,7 +5,7 @@ const Step1 = props => {
     //props
     const {changePage, updateAppData} = props;
     //states
-    const [formData, setFormData] = useState({ name: 'adsad', email: 'asdas@as.com', phone: '45465465' });
+    const [formData, setFormData] = useState({ name: 'Abhay', email: 'abhay@email.com', phone: '45465465' });
     //functions
     const 
     submitForm1 = (evt)=>{

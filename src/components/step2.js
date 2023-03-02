@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 //styles
 import '../styles/appBody.css';
 import '../styles/extra.css';   
@@ -9,11 +9,15 @@ import pro from '../assets/images/icon-pro.svg';
 
 const Step2 = props => {
     //props
-    const {changePage, updateAppData} = props;
+    const { changePage, updateAppData, appData } = props;
     //states
     const 
-    [planType, setPlanType] = useState('Advanced'),
+    [planType, setPlanType] = useState(appData?.form2?.planType),
     [isMonthlyPlan, setIsMonthlyPlan] = useState(true);
+    // lifecycle
+    useEffect(()=> {
+        if(appData?.form2) setIsMonthlyPlan(appData?.form2?.isMonthlyPlan)
+    },[])
     // functions
     const
     handleSquare = val=>{
@@ -26,7 +30,17 @@ const Step2 = props => {
         return 'square';
     },
     handleSubmit = ()=> {
-        updateAppData({name: 'form2', value: {planType, isMonthlyPlan}})
+        let planCost;
+        if(isMonthlyPlan){
+            if(planType==='Arcade') planCost = 9;
+            if(planType==='Advanced') planCost = 12;
+            if(planType==='Pro') planCost = 15;
+        }else{
+            if(planType==='Arcade') planCost = 90;
+            if(planType==='Advanced') planCost = 120;
+            if(planType==='Pro') planCost = 150;
+        }
+        updateAppData({name: 'form2', value: {planType, isMonthlyPlan, planCost}})
     }
     return (
         <div className='formBody step2'>
