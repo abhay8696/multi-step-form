@@ -1,6 +1,6 @@
 # Rock Paper Scissors Game (Frontend Mentor Challenge)
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./screenshots/Screenshot.png)
+![Design preview for the REST Countries API with color theme switcher coding challenge](./screenshots/screenshot1.png)
 
 ## [visit website here](https://abhay8696.github.io/multi-step-form/)
 
