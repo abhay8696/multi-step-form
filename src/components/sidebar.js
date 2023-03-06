@@ -44,13 +44,13 @@ const Sidebar = props => {
 
     return (
         <>
-        <div className='sidebar'>
+        <div className='sidebar intro'>
             <div className='sidebarContainer'>
                 { displayItems1() }
             </div>
             <img src={dummyImg1} className='dummyImg1'/>
         </div>
-        <div className='topbar'>
+        <div className='topbar intro'>
             <div className='topbarContainer'>
                 {displayItems2()}
             </div>

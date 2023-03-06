@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/appBody.css'
+import '../styles/step1.css'
+import '../styles/animations.css'
 
 const Step1 = props => {
     //props
@@ -19,7 +21,7 @@ const Step1 = props => {
       setFormData({ ...formData, [name]: value });
     };
     return (
-        <form className='formBody step1' onSubmit={submitForm1}>
+        <form className='formBody step1 animate1' onSubmit={submitForm1}>
             <div className='stepHead'>
                 <span className='headH1'>Personal Info</span>
                 <span className='headInfo'>Please provide your name, email address and phone number.</span>

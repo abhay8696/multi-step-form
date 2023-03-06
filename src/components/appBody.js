@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 //styles
 import '../styles/appBody.css'
+import '../styles/animations.css'
 //components
 import Step1 from './step1';
 import Step2 from './step2';
@@ -36,7 +37,7 @@ const AppBody = props => {
           return comp;
     }
     return (
-        <div className='appBody'>
+        <div className='appBody intro'>
             {displayPage()}
         </div>
     );

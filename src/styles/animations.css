@@ -1,0 +1,64 @@
+.intro {
+  opacity: 0;
+  animation: fadeIn 500ms linear 2s normal forwards;
+}
+
+.introOut {
+  opacity: 1;
+  animation: fadeOut 500ms linear 2s normal forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes slideOut {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+    scale: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=animations.css.map */

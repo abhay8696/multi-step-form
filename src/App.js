@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 //styles
 import './styles/App.css';
+import './styles/animations.css'
 //components
 import Sidebar from './components/sidebar';
 import AppBody from './components/appBody';
@@ -49,6 +50,7 @@ function App() {
   
   return (
     <div className="App">
+      <h1 className='loading introOut'>Loading...</h1>
       <Sidebar 
         currnetPage={currnetPage} 
       />
