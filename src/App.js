@@ -10,6 +10,7 @@ function App() {
   //states
   const 
   [ currnetPage, setCurrentPage ] = useState(1),
+  [ pageDirection, setPageDirection ] = useState('forwardDirection'),
   [ appData, setAppData ] = useState({
     form2: {
       isMonthlyPlan: true,
@@ -46,13 +47,16 @@ function App() {
 
       // setAdd_onData([...arr2]); 
       setAppData({ ...appData, form3: [...arr2] });
-  }
+  },
+  changePageDirection = direction=> setPageDirection(direction);
   
   return (
     <div className="App">
       <h1 className='loading introOut'>Loading...</h1>
       <Sidebar 
         currnetPage={currnetPage} 
+        changePageDirection={changePageDirection}
+        pageDirection={pageDirection}
       />
       <AppBody 
         currnetPage={currnetPage} 
@@ -60,6 +64,8 @@ function App() {
         updateAppData={updateAppData}
         appData={appData}
         handleAdd_on={handleAdd_on}
+        changePageDirection={changePageDirection}
+        pageDirection={pageDirection}
       />
     </div>
   );

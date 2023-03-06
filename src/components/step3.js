@@ -5,7 +5,7 @@ import '../styles/appBody.css';
 
 const Step3 = props => {
     //props
-    const { changePage , appData, handleAdd_on } = props;
+    const { changePage , appData, handleAdd_on, changePageDirection, pageDirection } = props;
 
     let isMonthlyPlan = appData?.form2?.isMonthlyPlan;
     //states
@@ -17,9 +17,17 @@ const Step3 = props => {
         if(sqrNo===2 && add_onData[1]?.name==='Larger Storage') return 'square step3Square selected';
         if(sqrNo===3 && add_onData[2]?.name==='Customizable profile') return 'square step3Square selected';
         return 'square step3Square';
+    },
+    handleSubmit3 = ()=>{
+        changePage();
+        changePageDirection('forwardDirection');
+    },
+    handleBack3 = ()=> {
+        changePage(true);
+        changePageDirection('backwardDirection');
     }
     return (
-        <div className='formBody step3'>
+        <div className='formBody step3 intro2'>
             <div className='stepHead'>
                 <span className='headH1'>Pick add-ons</span>
                 <span className='headInfo'>Add-ons help enhance your gaming experience.</span>
@@ -74,8 +82,8 @@ const Step3 = props => {
                 </div>
             </div>  
             <div className='formButtons'>
-                <div className='backButton'onClick={()=> changePage(true)}>Go Back</div>
-                <div className='nextButton' onClick={()=> changePage()}>Next Step</div>
+                <div className='backButton'onClick={()=> handleBack3()}>Go Back</div>
+                <div className='nextButton' onClick={()=> handleSubmit3()}>Next Step</div>
             </div>
         </div>
     );

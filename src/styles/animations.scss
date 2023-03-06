@@ -6,9 +6,19 @@
     opacity: 0;
     animation: fadeIn 500ms linear 2s normal forwards ;
 }
+.intro2{
+    opacity: 0;
+    animation: fadeIn2 500ms linear 0s normal forwards ;
+}
 .introOut{
     opacity: 1;
     animation: fadeOut 500ms linear 2s normal forwards ;
+}
+.displayON{
+    opacity: 1;
+}
+.displayOFF{
+    opacity: 0;
 }
 
 @keyframes fadeIn {
@@ -16,6 +26,14 @@
         opacity: 1;
     }
     1%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeIn2 {
+    0%{
         opacity: 0;
     }
     100%{
@@ -35,34 +53,5 @@
     100%{
         opacity: 0;
         display: none;
-    }
-}
-
-@keyframes slideIn {
-    0%{
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    75%{
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0%);
-        opacity: 1;
-        scale: 1;
-    }
-}
-@keyframes slideOut {
-    0%{
-        transform: translateY(0%);
-        opacity: 1;
-        scale: 1;
-    }
-    75%{
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(-50%);
-        opacity: 0;
     }
 }

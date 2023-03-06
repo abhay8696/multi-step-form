@@ -9,7 +9,7 @@ import pro from '../assets/images/icon-pro.svg';
 
 const Step2 = props => {
     //props
-    const { changePage, updateAppData, appData } = props;
+    const { changePage, updateAppData, appData, changePageDirection, pageDirection } = props;
     //states
     const 
     [planType, setPlanType] = useState(appData?.form2?.planType),
@@ -40,10 +40,15 @@ const Step2 = props => {
             if(planType==='Advanced') planCost = 120;
             if(planType==='Pro') planCost = 150;
         }
-        updateAppData({name: 'form2', value: {planType, isMonthlyPlan, planCost}})
+        updateAppData({name: 'form2', value: {planType, isMonthlyPlan, planCost}});
+        changePageDirection('forwardDirection');
+    },
+    handleBack = ()=> {
+        changePage(true);
+        changePageDirection('backwardDirection');
     }
     return (
-        <div className='formBody step2'>
+        <div className={`formBody step2 intro2`}>
             <div className='stepHead'>
                 <span className='headH1'>Select Your Plan</span>
                 <span className='headInfo'>You have option for monthly and yearly billing.</span>
@@ -100,7 +105,7 @@ const Step2 = props => {
                 </div>
             </div>  
             <div className='formButtons'>
-                <div className='backButton'onClick={()=> changePage(true)}>Go Back</div>
+                <div className='backButton'onClick={()=> handleBack()}>Go Back</div>
                 <div className='nextButton' onClick={()=> handleSubmit()}>Next Step</div>
             </div>
         </div>

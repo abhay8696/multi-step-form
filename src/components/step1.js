@@ -5,7 +5,7 @@ import '../styles/animations.css'
 
 const Step1 = props => {
     //props
-    const {changePage, updateAppData} = props;
+    const {changePage, updateAppData, changePageDirection, pageDirection} = props;
     //states
     const [formData, setFormData] = useState({ name: 'Abhay', email: 'abhay@email.com', phone: '45465465' });
     //functions
@@ -14,6 +14,7 @@ const Step1 = props => {
         evt.preventDefault();
         updateAppData({name: 'form1', value:formData});
         changePage();
+        changePageDirection('forwardDirection');
     },
     handleChange = (event) => {
       const { name, value } = event.target;
@@ -21,7 +22,7 @@ const Step1 = props => {
       setFormData({ ...formData, [name]: value });
     };
     return (
-        <form className='formBody step1 animate1' onSubmit={submitForm1}>
+        <form className='formBody step1 intro' onSubmit={submitForm1}>
             <div className='stepHead'>
                 <span className='headH1'>Personal Info</span>
                 <span className='headInfo'>Please provide your name, email address and phone number.</span>

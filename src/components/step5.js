@@ -7,7 +7,7 @@ import thankYou from '../assets/images/icon-thank-you.svg';
 
 const Step5 = () => {
     return (
-        <div className='formBody step5'>
+        <div className='formBody step5 intro2'>
             <div className='thankYouDiv'>
                 <img src={thankYou} />
                 <div className='thankYouHead'>Thank You!</div>

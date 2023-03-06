@@ -5,7 +5,7 @@ import '../styles/appBody.css';
 
 const Step4 = props => {
     //props
-    const { changePage ,updateAppData, appData } = props;
+    const { changePage ,updateAppData, appData, changePageDirection, pageDirection } = props;
     // states
     // functions
     const 
@@ -49,9 +49,17 @@ const Step4 = props => {
         });
         console.log(arr)
         return arr;
+    },
+    handleSubmit4 = ()=>{
+        changePage();
+        changePageDirection('forwardDirection');
+    },
+    handleBack4 = ()=> {
+        changePage(true);
+        changePageDirection('backwardDirection');
     }
     return (
-        <div className='formBody step4'>
+        <div className='formBody step4 intro2'>
             <div className='stepHead'>
                 <span className='headH1'>Finishing up</span>
                 <span className='headInfo'>Double-check everything looks OK before confirming.</span>
@@ -75,8 +83,8 @@ const Step4 = props => {
                 </div>
             </div>  
             <div className='formButtons'>
-                <div className='backButton'onClick={()=> changePage(true)}>Go Back</div>
-                <div className='nextButton' onClick={()=> changePage()}>Next Step</div>
+                <div className='backButton'onClick={()=> handleBack4()}>Go Back</div>
+                <div className='nextButton' onClick={()=> handleSubmit4()}>Next Step</div>
             </div>
         </div>
     );
